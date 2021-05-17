@@ -1,4 +1,4 @@
 class HotelRating < ApplicationRecord
-  belongs_to :user_id
-  belongs_to :hotel_id
+  belongs_to :user
+  belongs_to :hotel
 end

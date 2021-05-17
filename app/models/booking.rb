@@ -1,4 +1,4 @@
 class Booking < ApplicationRecord
-    has_many :rooms
-    has_many :hotels, through: :rooms
+    belongs_to :user_id
+    belongs_to :room_id
 end
