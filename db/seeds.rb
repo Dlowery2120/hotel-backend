@@ -5,10 +5,22 @@ User.create!(username: "ligmaman", password_digest: "123", first_name: "Devante"
 User.create!(username: "ligmaman", password_digest: "123", first_name: "Devante", last_name: "Lowery")
 
 
-require 'byebug'
-require 'rest-client'
-require 'json'
+require 'uri'
+require 'net/http'
+require 'openssl'
 
+url = URI("https://hotels-com-free.p.rapidapi.com/pde/property-details/v1/hotels.com")
+
+http = Net::HTTP.new(url.host, url.port)
+http.use_ssl = true
+http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+request = Net::HTTP::Get.new(url)
+request["x-rapidapi-key"] = ENV["KEY"]
+request["x-rapidapi-host"] = 'hotels-com-free.p.rapidapi.com'
+
+response = http.request(request)
+puts response.read_body
 ########### PARK SEEDS ##############
 
 # park_response = RestClient.get 'https://developer.nps.gov/api/v1/parks?limit=500&api_key=wYSrUWm0QzfFhZOe2ZhqKexlygpTBfp0N1cJoek5'
