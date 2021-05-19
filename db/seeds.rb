@@ -1,5 +1,5 @@
 User.destroy_all
-
+Hotel.destroy_all
 
 require 'pry'
 require 'rest-client'
@@ -9,23 +9,40 @@ require 'openssl'
 
 
 User.create!(username: "ligmaman", password_digest: "123", first_name: "Devante", last_name: "Lowery")
+    10.times do 
+    endpoints = [106346, 106347, 106341].sample
+    end
+    binding.pry
+    url = URI("https://hotels-com-free.p.rapidapi.com/pde/property-details/v1/hotels.com/#{endpoints}?rooms=1&checkIn=2021-01-27&checkOut=2021-01-28&locale=en_US&currency=USD&include=neighborhood")
+   
+    http = Net::HTTP.new(url.host, url.port)
+    http.use_ssl = true
+    http.verify_mode = OpenSSL::SSL::VERIFY_NONE
 
-url = URI("https://hotels-com-free.p.rapidapi.com/pde/property-details/v1/hotels.com/106346?rooms=1&checkIn=2021-01-27&checkOut=2021-01-28&locale=en_US&currency=USD&include=neighborhood")
+    request = Net::HTTP::Get.new(url)
+    request["x-rapidapi-key"] = ENV["KEY"]
+    request["x-rapidapi-host"] = 'hotels-com-free.p.rapidapi.com'
 
-http = Net::HTTP.new(url.host, url.port)
-http.use_ssl = true
-http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+    response = http.request(request)
 
-request = Net::HTTP::Get.new(url)
-request["x-rapidapi-key"] = ENV["KEY"]
-request["x-rapidapi-host"] = 'hotels-com-free.p.rapidapi.com'
+    data = JSON.parse(response.body)
 
-response = http.request(request)
+    address = data["data"]["body"]["propertyDescription"]["address"]["addressLine1"]
+    hotel_name = data["data"]["body"]["propertyDescription"]["name"]
+    hotel_stars = data["data"]["body"]["propertyDescription"]["starRating"]
+    hotel_id = data["data"]["body"]["pdpHeader"]["hotelId"]
+    price = data["data"]["body"]["propertyDescription"]["featuredPrice"]["currentPrice"]["plain"]
 
-array = JSON.parse(response.body)
+   
+    Hotel.create(name: hotel_name, location: address)
+
+    # end
 
 
-binding.pry
+
+
+
+
 # GET request with modified headers
 # RestClient.get 'https://hotels-com-free.p.rapidapi.com/pde/property-details/v1/hotels.com', {:Authorization => 'Bearer 0c909ee324msh24ce65d9b57297cp180852jsn5b71f97c1723'}
 
