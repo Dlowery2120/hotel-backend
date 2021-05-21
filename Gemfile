@@ -20,6 +20,7 @@ gem 'rest-client'
 gem 'jwt'
 gem 'json'
 gem 'pry'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
