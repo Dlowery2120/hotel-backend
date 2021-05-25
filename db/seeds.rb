@@ -11,9 +11,19 @@ Room.destroy_all
 Booking.destroy_all
 
 u1 = User.create(username: "ligmaman", password: "123", first_name: "Devante", last_name: "Lowery")
-h1 = Hotel.create(name: 'Holiday Inn', location: 'Houston, TX')
-r1 = Room.create(room_num: 311, price: 75, suite: 'King', hotel_id: h1.id)
+
+h1 = Hotel.create(name: 'Holiday Inn', location: 'Houston, TX', img: '')
+h2 = Hotel.create(name: 'Comfort Suites', location: 'Austin, TX', img: '')
+h3 = Hotel.create(name: 'Sharaton', location: 'Dallas, TX', img: '')
+
+r1 = Room.create(room_num: 311, price: 75, suite: 'King', img: '' hotel_id: h1.id)
+r2 = Room.create(room_num: 205, price: 75, suite: 'Twin', img: '' hotel_id: h1.id)
+r3 = Room.create(room_num: 115, price: 90, suite: 'Double Bed', img: '' hotel_id: h1.id)
+
 b1 = Booking.create(reservation_number: 12345, check_in: '2021-04-01', check_out: '2021-04-05', user_id: u1.id, room_id: r1.id)
+b2 = Booking.create(reservation_number: 67890, check_in: '2021-05-03', check_out: '2021-05-20', user_id: u1.id, room_id: r2.id)
+b3 = Booking.create(reservation_number: 29150, check_in: '2021-03-14', check_out: '2021-03-26', user_id: u1.id, room_id: r2.id)
+b4 = Booking.create(reservation_number: 29150, check_in: '2021-03-14', check_out: '2021-03-26', user_id: u1.id, room_id: r3.id)
 
     # 10.times do 
     # endpoints = [106346, 106347, 106341].sample
