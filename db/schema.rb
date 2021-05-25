@@ -16,23 +16,11 @@ ActiveRecord::Schema.define(version: 2021_05_17_212321) do
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
-    t.integer "cost"
     t.integer "reservation_number"
     t.date "check_in"
     t.date "check_out"
-    t.integer "length_of_stay"
-    t.string "guest_name"
     t.integer "user_id"
     t.integer "room_id"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
-  create_table "hotel_ratings", force: :cascade do |t|
-    t.integer "customer_rating"
-    t.integer "stars"
-    t.integer "user_id"
-    t.integer "hotel_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -47,8 +35,8 @@ ActiveRecord::Schema.define(version: 2021_05_17_212321) do
   create_table "rooms", force: :cascade do |t|
     t.integer "room_num"
     t.integer "price"
-    t.string "type"
-    t.integer "capacity"
+    t.string "suite"
+    t.integer "hotel_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

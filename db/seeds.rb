@@ -7,8 +7,14 @@ require 'openssl'
 
 User.destroy_all
 Hotel.destroy_all
+Room.destroy_all
+Booking.destroy_all
 
-User.create(username: "ligmaman", password: "123", first_name: "Devante", last_name: "Lowery")
+u1 = User.create(username: "ligmaman", password: "123", first_name: "Devante", last_name: "Lowery")
+h1 = Hotel.create(name: 'Holiday Inn', location: 'Houston, TX')
+r1 = Room.create(room_num: 311, price: 75, suite: 'King', hotel_id: h1.id)
+b1 = Booking.create(reservation_number: 12345, check_in: '2021-04-01', check_out: '2021-04-05', user_id: u1.id, room_id: r1.id)
+
     # 10.times do 
     # endpoints = [106346, 106347, 106341].sample
     # end
