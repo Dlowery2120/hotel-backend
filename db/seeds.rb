@@ -12,13 +12,13 @@ Booking.destroy_all
 
 u1 = User.create(username: "ligmaman", password: "123", first_name: "Devante", last_name: "Lowery")
 
-h1 = Hotel.create(name: 'Holiday Inn', location: 'Houston, TX', img: '')
-h2 = Hotel.create(name: 'Comfort Suites', location: 'Austin, TX', img: '')
-h3 = Hotel.create(name: 'Sharaton', location: 'Dallas, TX', img: '')
+h1 = Hotel.create(name: 'Holiday Inn', location: 'Houston, TX', img: 'https://images.unsplash.com/photo-1517840901100-8179e982acb7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80')
+h2 = Hotel.create(name: 'Comfort Suites', location: 'Austin, TX', img: 'https://images.unsplash.com/photo-1517840901100-8179e982acb7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80')
+h3 = Hotel.create(name: 'Sharaton', location: 'Dallas, TX', img: 'https://images.unsplash.com/photo-1517840901100-8179e982acb7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80')
 
-r1 = Room.create(room_num: 311, price: 75, suite: 'King', img: '' hotel_id: h1.id)
-r2 = Room.create(room_num: 205, price: 75, suite: 'Twin', img: '' hotel_id: h1.id)
-r3 = Room.create(room_num: 115, price: 90, suite: 'Double Bed', img: '' hotel_id: h1.id)
+r1 = Room.create(room_num: 311, price: 75, suite: 'King', img: 'https://images.unsplash.com/photo-1445991842772-097fea258e7b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80', hotel_id: h1.id)
+r2 = Room.create(room_num: 205, price: 75, suite: 'Twin', img: 'https://images.unsplash.com/photo-1445991842772-097fea258e7b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80', hotel_id: h1.id)
+r3 = Room.create(room_num: 115, price: 90, suite: 'Double Bed', img: 'https://images.unsplash.com/photo-1445991842772-097fea258e7b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80', hotel_id: h1.id)
 
 b1 = Booking.create(reservation_number: 12345, check_in: '2021-04-01', check_out: '2021-04-05', user_id: u1.id, room_id: r1.id)
 b2 = Booking.create(reservation_number: 67890, check_in: '2021-05-03', check_out: '2021-05-20', user_id: u1.id, room_id: r2.id)
