@@ -1,5 +1,5 @@
 class Api::V1::AuthController < ApplicationController
-
+    skip_before_action :logged_in?, only: [:create]
     def login 
     # byebug
         # search for a user 

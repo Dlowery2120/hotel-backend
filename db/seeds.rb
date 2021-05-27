@@ -13,6 +13,10 @@ Booking.destroy_all
 u1 = User.create(username: "ligmaman", password: "123", first_name: "Devante", last_name: "Lowery")
 
 h1 = Hotel.create(name: 'Holiday Inn', location: 'Houston, TX', img: 'https://images.unsplash.com/photo-1517840901100-8179e982acb7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80')
+h1 = Hotel.create(name: 'Comfort Suites', location: 'Houston, TX', img: 'https://images.unsplash.com/photo-1517840901100-8179e982acb7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80')
+h1 = Hotel.create(name: 'Super 8', location: 'Houston, TX', img: 'https://images.unsplash.com/photo-1517840901100-8179e982acb7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80')
+h1 = Hotel.create(name: 'Motel 6', location: 'Houston, TX', img: 'https://images.unsplash.com/photo-1517840901100-8179e982acb7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80')
+h1 = Hotel.create(name: 'Country Inn', location: 'Houston, TX', img: 'https://images.unsplash.com/photo-1517840901100-8179e982acb7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80')
 h2 = Hotel.create(name: 'Comfort Suites', location: 'Austin, TX', img: 'https://images.unsplash.com/photo-1517840901100-8179e982acb7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80')
 h3 = Hotel.create(name: 'Sharaton', location: 'Dallas, TX', img: 'https://images.unsplash.com/photo-1517840901100-8179e982acb7?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2850&q=80')
 
@@ -24,7 +28,6 @@ b1 = Booking.create(reservation_number: 12345, check_in: '2021-04-01', check_out
 b2 = Booking.create(reservation_number: 67890, check_in: '2021-05-03', check_out: '2021-05-20', user_id: u1.id, room_id: r2.id)
 b3 = Booking.create(reservation_number: 29150, check_in: '2021-03-14', check_out: '2021-03-26', user_id: u1.id, room_id: r2.id)
 b4 = Booking.create(reservation_number: 29150, check_in: '2021-03-14', check_out: '2021-03-26', user_id: u1.id, room_id: r3.id)
-
     # 10.times do 
     # endpoints = [106346, 106347, 106341].sample
     # end

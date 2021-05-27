@@ -7,7 +7,7 @@ class Api::V1::HotelsController < ApplicationController
     def show
         hotel = Hotel.find_by(id: params[:id])
         if hotel
-          render json: hotel, except: [:created_at, :updated_at]
+          render json: hotel
         else
           render json: {message: 'Hotel not found'}
         end
