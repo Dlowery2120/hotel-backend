@@ -27,6 +27,8 @@ ActiveRecord::Schema.define(version: 2021_05_17_212321) do
 
   create_table "hotels", force: :cascade do |t|
     t.string "name"
+    t.integer "stars"
+    t.string "address"
     t.string "location"
     t.string "img"
     t.datetime "created_at", precision: 6, null: false

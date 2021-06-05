@@ -22,10 +22,21 @@ class Api::V1::BookingsController < ApplicationController
         end
     end
 
+    def update
+      booking = Booking.find(params[:id])
+      booking.update(booking_params)
+      render json: booking
+    end
+    
+
+    def destroy
+      booking = Booking.destroy(params[:id])
+    end
+
     private
 
     def booking_params
         params.require(:booking).permit(:reservation_number, :check_in, :check_out, :user_id, :room_id)
-      end
+    end
 end
 

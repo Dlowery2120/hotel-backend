@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::API
-    before_action :logged_in?
+
     def logged_in?
         # byebug
          headers= request.headers["Authorization"]
