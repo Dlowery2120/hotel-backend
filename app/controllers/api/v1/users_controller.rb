@@ -1,5 +1,5 @@
 class Api::V1::UsersController < ApplicationController  
-    
+  # skip_before_action :logged_in?, only: [:create]
   wrap_parameters :user, include: [:username, :password, :password_confirmation, :first_name, :last_name]
       def index
           users = User.all
@@ -15,6 +15,7 @@ class Api::V1::UsersController < ApplicationController
           end
       end
       def create
+        
         user = User.new(user_params)
     
         if user.save
@@ -24,10 +25,10 @@ class Api::V1::UsersController < ApplicationController
         end
       end
 
+      private 
+      
+      def user_params
+        params.require(:user).permit(:username, :password, :password_confirmation, :first_name, :last_name)
+      end
   end
   
-  private 
-  
-  def user_params
-    params.require(:user).permit(:username, :password, :password_confirmation, :first_name, :last_name)
-  end
