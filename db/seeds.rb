@@ -27,7 +27,7 @@ Booking.destroy_all
     
 #     data = JSON.parse(response.body)
 # end
-u1 = User.create(username: "ligmaman", password: "123", first_name: "Devante", last_name: "Lowery")
+u1 = User.create(username: "username", password: "password", first_name: "Devante", last_name: "Lowery")
 
 h1 = Hotel.create(name: 'Holiday Inn', stars: 3, address: '1604 Walker St', location: 'Houston, TX', img: 'https://digital.ihg.com/is/image/ihg/holiday-inn-houston-4650545414-2x1?wid=2880&hei=1440&qlt=85,0&resMode=sharp2&op_usm=1.75,0.9,2,0&qlt=85,0&resMode=sharp2&op_usm=1.75,0.9,2,0')
 h2 = Hotel.create(name: 'Comfort Suites', stars: 3, address: '3803 Millbridge Dr', location: 'Houston, TX', img: 'https://www.choicehotels.com/hotelmedia/US/TX/katy/TXE90/1280/Exterior4.webp')
@@ -72,7 +72,11 @@ r26 = Room.create(room_num: 230, price: 113, suite: 'King Suite', img: 'https://
 r27 = Room.create(room_num: 217, price: 95, suite: 'King Suite', img: 'https://images.unsplash.com/photo-1445991842772-097fea258e7b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80', hotel_id: Hotel.all.sample.id)
 r28 = Room.create(room_num: 222, price: 67, suite: 'Twin Suite', img: 'https://images.unsplash.com/photo-1445991842772-097fea258e7b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80', hotel_id: Hotel.all.sample.id)
 r29 = Room.create(room_num: 180, price: 300, suite: 'King Suite', img: 'https://images.unsplash.com/photo-1445991842772-097fea258e7b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80', hotel_id: Hotel.all.sample.id)
-r29 = Room.create(room_num: 200, price: 250, suite: 'Twin Suite', img: 'https://images.unsplash.com/photo-1445991842772-097fea258e7b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80', hotel_id: Hotel.all.sample.id)
+r30 = Room.create(room_num: 200, price: 250, suite: 'Twin Suite', img: 'https://images.unsplash.com/photo-1445991842772-097fea258e7b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80', hotel_id: Hotel.all.sample.id)
+r31 = Room.create(room_num: 150, price: 250, suite: 'King Suite', img: 'https://images.unsplash.com/photo-1445991842772-097fea258e7b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80', hotel_id: Hotel.all.sample.id)
+r32 = Room.create(room_num: 100, price: 85, suite: 'Queen Suite', img: 'https://images.unsplash.com/photo-1445991842772-097fea258e7b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80', hotel_id: Hotel.all.sample.id)
+r33 = Room.create(room_num: 135, price: 75, suite: 'King Suite', img: 'https://images.unsplash.com/photo-1445991842772-097fea258e7b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80', hotel_id: Hotel.all.sample.id)
+r34 = Room.create(room_num: 320, price: 95, suite: 'Queen Suite', img: 'https://images.unsplash.com/photo-1445991842772-097fea258e7b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80', hotel_id: Hotel.all.sample.id)
 
 
 b1 = Booking.create(reservation_number: 12345, check_in: '2021-04-01', check_out: '2021-04-05', user_id: u1.id, room_id: r1.id)
