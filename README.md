@@ -1,24 +1,27 @@
-# README
+# Bookie
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+![Demo Gif](https://github.com/Dlowery2120/hotel-frontend/blob/master/public/ezgif.com-gif-maker.gif?raw=true)
 
-Things you may want to cover:
+## Features
+Sign in/Sign up option with authenticated password.
 
-* Ruby version
+Search by Location.
 
-* System dependencies
+Full CRUD capabilities for reservations such as:
 
-* Configuration
+Create a reservation.
 
-* Database creation
+View all reservations for the logged in user.
 
-* Database initialization
+Edit/Delete only the posts written by the logged in user.
 
-* How to run the test suite
+## Tech Stack
+This web app makes use of the following:
 
-* Services (job queues, cache servers, search engines, etc.)
+Ruby 
 
-* Deployment instructions
+Rails - MVC Web Framework
 
-* ...
+PostGreSQL - Database
+
+BCrypt - Gem for encryption
