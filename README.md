@@ -20,9 +20,7 @@ This web app makes use of the following:
 
 React.js - Javascript Framework
 
-Ruby 
-
-Rails - MVC Web Framework
+Ruby on Rails - Ruby Framework
 
 PostGreSQL - Database
 
