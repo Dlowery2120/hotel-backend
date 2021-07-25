@@ -75,7 +75,7 @@ r29 = Room.create(room_num: 180, price: 300, suite: 'King Suite', img: 'https://
 r30 = Room.create(room_num: 200, price: 250, suite: 'Twin Suite', img: 'https://images.unsplash.com/photo-1445991842772-097fea258e7b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80', hotel_id: Hotel.all.sample.id)
 r31 = Room.create(room_num: 150, price: 250, suite: 'King Suite', img: 'https://images.unsplash.com/photo-1445991842772-097fea258e7b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80', hotel_id: Hotel.all.sample.id)
 r32 = Room.create(room_num: 100, price: 85, suite: 'Queen Suite', img: 'https://images.unsplash.com/photo-1445991842772-097fea258e7b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80', hotel_id: Hotel.all.sample.id)
-r33 = Room.create(room_num: 135, price: 75, suite: 'King Suite', img: 'https://images.unsplash.com/photo-1445991842772-097fea258e7b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80', hotel_id: Hotel.all.sample.id)
+r33 = Room.create(room_num: 120, price: 75, suite: 'King Suite', img: 'https://images.unsplash.com/photo-1445991842772-097fea258e7b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80', hotel_id: Hotel.all.sample.id)
 r34 = Room.create(room_num: 320, price: 95, suite: 'Queen Suite', img: 'https://images.unsplash.com/photo-1445991842772-097fea258e7b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80', hotel_id: Hotel.all.sample.id)
 
 
