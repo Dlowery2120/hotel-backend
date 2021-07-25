@@ -1,4 +1,7 @@
 class Room < ApplicationRecord
-  belongs_to :hotel_id
-  belongs_to :booking_id
+  has_many :bookings
+  has_many :users, through: :bookings
+
+  belongs_to :hotel
+
 end
